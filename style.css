@@ -1,0 +1,101 @@
+/*
+Copyright 2014 Includable/Thomas Schoffelen.
+*/
+
+/*
+- General
+- Typografy
+- Header
+- Navigation 
+- Content
+- Sidebar
+- Footer
+- Clearfix
+- Mobile
+*/
+
+
+/* ---------- General ---------- */
+
+@font-face {
+	font-family: 'PineHome';
+	src: url('fonts/9cea1d1b-5428-4461-8a01-23d44045d07e.eot');
+	src: local('☺'), url('fonts/9cea1d1b-5428-4461-8a01-23d44045d07e.woff') format('woff'), url('fonts/9cea1d1b-5428-4461-8a01-23d44045d07e.ttf') format('truetype'), url('fonts/9cea1d1b-5428-4461-8a01-23d44045d07e.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+html, body {
+    font-family: "PineHome", "Helvetica Neue", Arial, sans-serif;
+    font-size: 15px;
+    height: 100%;
+}
+
+.container {
+	max-width: 720px;
+	margin: 0 auto;
+}
+
+
+/* ---------- Typography ---------- */
+
+p {
+	line-height: 20px;
+}
+
+a {
+	color: #0088CC;
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+
+
+/* ---------- Header ---------- */
+
+.comingsoon {
+	text-align: center;
+}
+.comingsoon .container {
+	padding: 80px 0;
+}
+.comingsoon.logo {
+	background-color: #F9FAFB;
+}
+.comingsoon h1.logo {
+	padding-top: 140px;
+	background: transparent url("img/logo.png") no-repeat top;
+
+	font-size: 84px;
+	margin: 0;
+}
+.comingsoon p {
+	font-size: 24px;
+	line-height: 30px;
+	margin: 0;
+	padding-top: 12px;
+}
+
+/* ---------- Clearfix ---------- */
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+
+/* ---------- Mobile ---------- */
+
+@media only screen and (max-width: 768px) {
+	
+}
