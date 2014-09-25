@@ -5,15 +5,17 @@
         <meta http-equiv="X-UA-Compatible" content="IE=9, IE=8, chrome=1" />
         <meta name="viewport" content="width=device-width">
         
-        <title>Pine - Analyzable Learning Record Store</title>
-        <meta name="description" content="Coming soon!">
+        <title>Pine - An Analyzable Learning Record Store</title>
+        <meta name="description" content="">
         <meta name="keywords" content="">
-
+        
         <!-- HTML5 Shiv -->
         <!--[if lt IE 9]><script src="js/html5.js"></script><![endif]-->
         
         <!-- Stylesheets -->
+        <link href='http://fonts.googleapis.com/css?family=Raleway:300' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="css/normalize.css" type="text/css" media="screen, print" />
+        <link rel="stylesheet" href="css/grid.css" type="text/css" media="screen, print" />
         <link rel="stylesheet" href="style.css" type="text/css" media="screen, print" />
         
         <!-- Javascript -->
@@ -23,22 +25,137 @@
         <link rel="shortcut icon" href="favicon.ico">
     </head>
     <body>
+        <div class="ui">
         
-        <!-- Coming soon --> 
-        <section class="comingsoon logo">
-            <div class="container">
-                <h1 class="logo">Pine</h1>
-            </div>
-        </section>
+        	<!-- Header --> 
+        	<header>
+        		<div class="container">
+                    <h1 class="logo"><a href="/">Pine</a></h1>
+            		<nav>
+                        <ul>
+            				<li class="active"><a href="/">Features</a></li>
+            				<li><a href="#" onclick="$('#overlay_account').addClass('show');">Create a Record Store</a></li>
+                            <li><a href="#" onclick="$('#overlay_login').addClass('show');">Sign In</a></li>
+                            <li><a href="mailto:tom@scholica.com">Contact</a></li>
+            			</ul>
+                    </nav>
+                </div>
+        	</header>
 
-        <section class="comingsoon">
-            <div class="container">
-                <p>
-                    Pine is an analyzable Learning Record Store (LRS) that implements the Tin Can API. It allows teachers and course creators to analyze learning records to improve their learning materials. Coming soon!<br /><br />
-                    <a href="https://assembly.com/pine">Help building Pine on Assembly</a>
-                </p>
-            </div>
-        </section>
+            <section class="hero homepage">
+                <div class="container">
+                    <h1>An Analyzable Learning Record Store</h1>
+                </div>
+            </section>
+        
+        	<!-- Content -->
+            <section class="content">
+                <div class="container">
+                	<article>
+                        <img src="img/screens/events.png" class="img-right" />
+                		<h2>Get insight into your students’ progress</h2>
+                		<p>Increasingly, students are asked to read web pages, do online tests, watch video’s and look at slideshows. We can check if they did do those things, but we can’t see when, where, how long they took and how many tries it took to complete.</p>
+                        <p>That’s why we built a simple interface to aggregate, manage and analyze these learning records. This happens using the Tin Can API, an open standard for saving learning data. A lot of learning tools already implement this, which makes it easy for you to connect to it.</p>
+                	</article>
+                	
+                	<article class="subs">
+                		<h2>Start generating reports in minutes</h2>
+                		<section class="subsections">
+                            <div>
+                                <h3><b>1</b> Create a Record Store</h3>
+                                <p>You need a place to store all that data. Create an account, choose your Record Store name and you are ready to roll! This Record Store can be used for multiple Events, so you won’t ever need to repeat this step.</p>
+                            </div>
+                            <div>
+                                <h3><b>2</b> Create an Event Link</h3>
+                                <p>An Event can be an online test, visiting a web page or watching a video. Create an Event from the Dashboard, share the link with your students and wait for the data to come rolling in...</p>
+                            </div>
+                            <div class="last">
+                                <h3><b>3</b> Build a Report</h3>
+                                <p>You can see results, duration and simular information for each student, but it gets really interesting once you start graphing it! Pine comes with some default Reports, so the pretty graphs are only a few clicks away.</p>
+                            </div>
+                        </section>
+                        <div class="clearfix"></div>
+                	</article>
+
+                    <article class="cta">
+                        <h2>Sign up and start tracking learning data</h2>
+                        <a class="btn large cta" onclick="$('#overlay_account').addClass('show');">Create a Record Store</a>
+                    </article>
+                </div>
+            </section>
+            
+            <!-- Footer -->
+            <footer>
+                <div class="container">
+                	<div class="copyright">
+                        <h1 class="logo">Pine Academy</h1>
+                		Copyright &copy; 2013 Includable. All rights reserved.<br />
+                        A high school computer science project by Thomas Schoffelen.
+                	</div>
+                </div>
+            </footer>
+            
+        </div>
+
+        <!-- Overlay: account creation -->
+        <div class="overlay" id="overlay_account">
+            <a onclick="$(this).parent().removeClass('show');" class="close">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8.157 8.157">
+                    <path d="M7.769 0l.389.388-7.77 7.769-.388-.388 7.769-7.769z" fill="#fff"></path>
+                    <path d="M.388 0l-.388.388 7.769 7.769.389-.389-7.77-7.768z" fill="#fff"></path>
+                </svg>
+            </a>
+            <img src="img/brand/logo.png" class="logo" />
+            <h3>Create a Record Store</h3>
+            <form name="create_lrs" class="form">
+                <legend>Your account</legend>
+                <div class="row-fluid">
+                    <div class="span6">
+                        <input type="email" name="email" placeholder="Email address" />
+                    </div>
+                    <div class="span6">
+                        <input type="password" name="password" placeholder="Password" />
+                    </div>
+                </div>
+                <hr />
+                <legend>Your Record Store</legend>
+                <div class="row-fluid">
+                    <div class="span12">
+                        <input type="text" name="title" placeholder="Title (i.e.: Chemistry 101)" />
+                    </div>
+                </div>
+                <div class="row-fluid">
+                    <div class="span12">
+                        <div class="input-append">
+                            http://
+                            <input type="text" name="slug" placeholder="my-record-store-name" />
+                            .pine.academy
+                        </div>
+                    </div>
+                </div>
+
+                <div class="submit">
+                    <input type="submit" value="Create Record Store" />
+                </div>
+            </form>
+        </div>
+
+        <!-- Overlay: sign in -->
+        <div class="overlay" id="overlay_login">
+            <a onclick="$(this).parent().removeClass('show');" class="close">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8.157 8.157">
+                    <path d="M7.769 0l.389.388-7.77 7.769-.388-.388 7.769-7.769z" fill="#fff"></path>
+                    <path d="M.388 0l-.388.388 7.769 7.769.389-.389-7.77-7.768z" fill="#fff"></path>
+                </svg>
+            </a>
+            <img src="img/brand/logo.png" class="logo" />
+            <h3>Sign In</h3>
+            <form name="lrs_login" class="form tiny">
+                <input type="email" name="email" placeholder="Email address" />
+                <input type="password" name="password" placeholder="Password" />
+                <input type="submit" value="Sign In" />
+            </form>
+        </div>
 
     </body>
 </html>
